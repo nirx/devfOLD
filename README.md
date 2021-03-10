@@ -1,95 +1,49 @@
-# fNIRS Optodes' Location Decider (fOLD)
+# The Developmental fNIRS Optodes’ Location Decider: devfOLD
 
-This toolbox allows for optode arrangement based on anatomical landmarks based on five parcellation methods.  
-Alternatively, one can also load volumetric fMRI data (NIfTI or ANALYZE) as mask for the fNIRS optodes positions.
+The toolbox assists NIRS and fNIRS users to design source-detector channel arrangement based on study-specific age groups and regions of interests (ROIs). 
 
-Before using fOLD, please carefully read its related manuscript: 
-* Zimeo Morais GA, Balardin JB, Sato JR, "fNIRS Optodes' Location Decider (fOLD): a toolbox for probe arrangement guided by brain regions-of-interest"
+Users of the devfOLD should refer to the manuscript: 
+Fu, X., & Richards, J.E: Age-specific Design of fNIRS Channel Placement: devfOLD: The Developmental fNIRS Optodes’ Location Decider. 
 
-fOLD is available as standalone for Windows (*.exe): /Exe/fOLD_web.exe   
-or as Application for Matlab environment: /App/fOLD.mlappinstall   
-Please note that the App version is currently only compatible with Matlab 2017a.
+devfOLD is available as an Application for Matlab environment: /App/fOLD.mlappinstall
+It operates on all tested MATLAB platforms (Windows 2020b, Mac OSX 2020b, Linux 2020a, Windows and Mac OSX MATLAB online).
+We presume that it works on prior MATLAB versions and will work on future ones.
 
-**Important Copyright-related guidelines for fOLD**: 
-1) fOLD is provided "as is" with no warranties and subject to change.
+The current toolbox is an extension of the fOLD toolbox (Zimeo Morais, Balardin, Sato, 2018). Please refer to:
+* Toolbox: https://github.com/nirx/fOLD-public
+* Manuscript: https://www.nature.com/articles/s41598-018-21716-z
+
+The key improvements from the fOLD toolbox are:
+* The channel-to-ROI specificity were estimated using age-specific head models. The head models were obtained from the “Neurodevelopmental MRI Database”. Information about the Database is available online: http://jerlab.psych.sc.edu/NeurodevelopmentalMRIDatabase/
+* The devfOLD allows users to make channel design decisions based on 1) averaged age group estimations from individual head models from the Database; 2) estimations from an individual participant head model from the user’s study; or 3) estimations from average age-appropriate templates from the Database.
+* ROI parcellations were conducted using developmentally appropriate stereotaxic atlases:
+  Lobar: Fillmore, Richards, Phillips-Meek, Cryer, and Stevens (2015)
+  Hammers: Heckemann, Hajnal, Aljabar, Rueckert, and Hammers (2006)
+  Brainnetome: Fan et al. (2016)
+  Desikan-Killiany-Tourville (Freesurfer): Klein and Tourville (2012)
+    - Infant Freesurfer: Zöllei, Iglesias, Ou, Grant, and Fischl (2020)
+  LONI Probabilistic Brain Atlas (LPBA40): Shattuck et al. (2008)
+  AAL3: Rolls, Huang, Lin, Feng, and Joliot (2020)
+
+The toolbox provides a set of example data: 
+* 3 months, 6 months, and adults - averaged age group estimations from individual head models (#1). Estimations can be displayed using the “Age” dropdown list.
+* A 3-month old individual: S0131 (#2). Estimations can be displayed by typing in the folder name in the “Age(specify)” box.
+* A 3-month age-appropriate template: S0300 (#3). Estimations can be displayed by typing in the folder name in the “Age(specify)” box.
+
+Additional data can be downloaded from folder “SeparateGroups” (method #1) based on the age group of interest. Please save the individual age folder (e.g. “1-0Months”) in the ../Developer/mat/ directory, and use the “Age(specify)” box in the toolbox to display the estimations.
+
+**Important Copyright-related guidelines for devfOLD**: 
+1) devfOLD is provided "as is" with no warranties and subject to change.
 2) The software shall not be redistributed without authorization.
-3) The aforementioned paper should be referenced if using fOLD.
+3) The aforementioned paper (Fu and Richards) should be referenced if using devfOLD.
 
-![fOLD](/Icon.png?raw=true)
-
-
-Please make sure to read and cite the publications related to the parcellation atlases, from which the results are derived:
-
-**AAL2** (http://www.gin.cnrs.fr/en/tools/aal-aal2/): 
-* Rolls ET, Joliot M, Tzourio-Mazoyer N (2015) Implementation of a new parcellation of the orbitofrontal cortex in the automated anatomical labeling atlas. Neuroimage. http://dx.doi.org/10.1016/j.neuroimage.2015.07.075  
-* Tzourio-Mazoyer N, Landeau B, Papathanassiou D, Crivello F, Etard O, Delcroix N, Mazoyer B, Joliot M (2002) 
-Automated anatomical labelling of activations in spm using a macroscopic anatomical parcellation of the MNI MRI single subject brain. Neuroimage 15:273-289. http://dx.doi.org/10.1006/nimg.2001.0978
-
-**AICHA** (http://www.gin.cnrs.fr/en/tools/aicha):
-* Joliot M, Jobard G, Naveau M, Delcroix N, Petit L, Zago L, Crivello F, Mellet E, Mazoyer B, Tzourio-Mazoyer N (2015) 
-AICHA: An atlas of intrinsic connectivity of homotopic areas. J Neurosci Methods 254:46-59. http://dx.doi.org/10.1016/j.jneumeth.2015.07.013
-
-**Brodmann** (http://www.cabiatl.com/mricro/mricro/lesion.html): 
-* Rorden C and Brett M (2000) Stereotaxic Display of Brain Lesions. Behavioural Neurology 12(4):191-200. http://doi.org/10.1155/2000/421719
-
-**J�lich** (http://www.fz-juelich.de/inm/inm-1/EN/Forschung/_docs/SPMAnatomyToolbox/SPMAnatomyToolbox_node.html): 
-* Eickhoff SB et al. (2005) A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data. NeuroImage 25, 1325�1335 https://doi.org/10.1016/j.neuroimage.2004.12.034  
-* Eickhoff SB et al. (2006) Testing anatomically specified hypotheses in functional imaging using cytoarchitectonic maps. NeuroImage 32, 570�582 https://doi.org/10.1016/j.neuroimage.2006.04.204  
-* Eickhoff SB et al. (2007) Assignment of functional activations to probabilistic cytoarchitectonic areas revisited. NeuroImage 36, 511�521 https://doi.org/10.1016/j.neuroimage.2007.03.060     
-* Please also cite the individual (cytoarchitectonic) mapping papers for the selected structures. A full list of references for individual areal is available in J�lich's website referenced above.
-
-**LONI** (http://loni.usc.edu/atlases/Atlas_Detail.php?atlas_id=12): 
-* Courtesy of Arthur W. Toga, Ph.D., USC Laboratory of Neuro Imaging, USC Mark and Mary Stevens Neuroimaging and Informatics Institute - <www.loni.usc.edu>
-* Shattuck DW et al. (2008) Construction of a 3D probabilistic atlas of human cortical structures. NeuroImage 39, 1064�1080 https://doi.org/10.1016/j.neuroimage.2007.09.031
-  
-  
-And following are the two head atlases that were considered for tissue segmentation and photon transport simulations:  
-
-**Colin27** (http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27): 
-* Holmes CJ et al. (1998) Enhancement of MR Images Using Registration for Signal Averaging: J. Comput. Assist. Tomogr. 22, 324�333 https://doi.org/10.1016/S1053-8119(96)80030-9
-
-**SPM12** (TPM.nii - https://github.com/neurodebian/spm12/blob/master/spm_templates.man): 
-* IXI Dataset: http://brain-development.org/ixi-dataset/  
-    
-    
-fOLD also makes use of "Tools for NIfTI and ANALYZE image" (Jimmy Shen) under following copyright:
-******************************************************************************************
-Copyright (c) 2014, Jimmy Shen 
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without 
-modification, are permitted provided that the following conditions are 
-met:
-
-* Redistributions of source code must retain the above copyright 
-notice, this list of conditions and the following disclaimer. 
-* Redistributions in binary form must reproduce the above copyright 
-notice, this list of conditions and the following disclaimer in 
-the documentation and/or other materials provided with the distribution
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
-POSSIBILITY OF SUCH DAMAGE.
-******************************************************************************************
-
-The authors would also like to acknowledge the importance of following publicly available tools for fOLD development:
-
-AtlasViewer (by Boas et al.): http://dx.doi.org/10.1117/1.NPh.2.2.020801
-
-iso2mesh (by Qianqian Fang): http://iso2mesh.sourceforge.net/cgi-bin/index.cgi
-
-Mesh2EEG (by Giacometti et al.): http://dx.doi.org/10.1016/j.jneumeth.2014.04.020
-
-Monte Carlo Extreme (by Qianqian Fang et al.): http://mcx.space/
-
-NFRI toolbox (by Jichi Medical University): http://www.jichi.ac.jp/brainlab/tools.html
+**References for the atlases used**:
+Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., . . . Jiang, T. (2016). The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26(8), 3508-3526. doi:10.1093/cercor/bhw157
+Fillmore, P. T., Richards, J. E., Phillips-Meek, M. C., Cryer, A., & Stevens, M. (2015). Stereotaxic Magnetic Resonance Imaging Brain Atlases for Infants from 3 to 12 Months. Developmental Neuroscience, 37(6), 515-532. doi:10.1159/000438749
+Heckemann, R. A., Hajnal, J. V., Aljabar, P., Rueckert, D., & Hammers, A. (2006). Automatic anatomical brain MRI segmentation combining label propagation and decision fusion. Neuroimage, 33(1), 115-126. doi:https://doi.org/10.1016/j.neuroimage.2006.05.061
+Klein, A., & Tourville, J. (2012). 101 Labeled Brain Images and a Consistent Human Cortical Labeling Protocol. Frontiers in Neuroscience, 6(171). doi:10.3389/fnins.2012.00171
+Rolls, E. T., Huang, C.-C., Lin, C.-P., Feng, J., & Joliot, M. (2020). Automated anatomical labelling atlas 3. Neuroimage, 206, 116189. 
+Shattuck, D. W., Mirza, M., Adisetiyo, V., Hojatkashani, C., Salamon, G., Narr, K. L., . . . Toga, A. W. (2008). Construction of a 3D probabilistic atlas of human cortical structures. Neuroimage, 39(3), 1064-1080. doi:https://doi.org/10.1016/j.neuroimage.2007.09.031
+Zöllei, L., Iglesias, J. E., Ou, Y., Grant, P. E., & Fischl, B. (2020). Infant FreeSurfer: An automated segmentation and surface extraction pipeline for T1-weighted neuroimaging data of infants 0–2 years. Neuroimage, 218, 116946. doi:https://doi.org/10.1016/j.neuroimage.2020.116946
 
 ------------------------------------------------------------------------------------------
