@@ -38,6 +38,7 @@ Additional data can be downloaded from folder “SeparateGroups” (method #1) b
 3) The aforementioned paper (Fu and Richards) should be referenced if using devfOLD.
 
 **References for the atlases used**:
+
 Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., . . . Jiang, T. (2016). The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26(8), 3508-3526. doi:10.1093/cercor/bhw157
 Fillmore, P. T., Richards, J. E., Phillips-Meek, M. C., Cryer, A., & Stevens, M. (2015). Stereotaxic Magnetic Resonance Imaging Brain Atlases for Infants from 3 to 12 Months. Developmental Neuroscience, 37(6), 515-532. doi:10.1159/000438749
 Heckemann, R. A., Hajnal, J. V., Aljabar, P., Rueckert, D., & Hammers, A. (2006). Automatic anatomical brain MRI segmentation combining label propagation and decision fusion. Neuroimage, 33(1), 115-126. doi:https://doi.org/10.1016/j.neuroimage.2006.05.061
