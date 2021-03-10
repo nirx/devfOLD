@@ -35,7 +35,7 @@ Additional data can be downloaded from folder “SeparateGroups” (method #1) b
 **Important Copyright-related guidelines for devfOLD**: 
 1) devfOLD is provided "as is" with no warranties and subject to change.
 2) The software shall not be redistributed without authorization.
-3) The aforementioned paper (Fu and Richards) should be referenced if using devfOLD.
+3) The devfOLD paper (Fu and Richards) and fOLD paper (Zimeo Morais et al., 2018) should be referenced if using devfOLD.
 
 **References for the atlases used**:
 
