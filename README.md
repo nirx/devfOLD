@@ -39,12 +39,12 @@ Additional data can be downloaded from folder “SeparateGroups” (method #1) b
 
 **References for the atlases used**:
 
-Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., . . . Jiang, T. (2016). The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26(8), 3508-3526. doi:10.1093/cercor/bhw157.
-Fillmore, P. T., Richards, J. E., Phillips-Meek, M. C., Cryer, A., & Stevens, M. (2015). Stereotaxic Magnetic Resonance Imaging Brain Atlases for Infants from 3 to 12 Months. Developmental Neuroscience, 37(6), 515-532. doi:10.1159/000438749.
-Heckemann, R. A., Hajnal, J. V., Aljabar, P., Rueckert, D., & Hammers, A. (2006). Automatic anatomical brain MRI segmentation combining label propagation and decision fusion. Neuroimage, 33(1), 115-126. doi:https://doi.org/10.1016/j.neuroimage.2006.05.061.
-Klein, A., & Tourville, J. (2012). 101 Labeled Brain Images and a Consistent Human Cortical Labeling Protocol. Frontiers in Neuroscience, 6(171). doi:10.3389/fnins.2012.00171
-Rolls, E. T., Huang, C.-C., Lin, C.-P., Feng, J., & Joliot, M. (2020). Automated anatomical labelling atlas 3. Neuroimage, 206, 116189. 
-Shattuck, D. W., Mirza, M., Adisetiyo, V., Hojatkashani, C., Salamon, G., Narr, K. L., . . . Toga, A. W. (2008). Construction of a 3D probabilistic atlas of human cortical structures. Neuroimage, 39(3), 1064-1080. doi:https://doi.org/10.1016/j.neuroimage.2007.09.031.
-Zöllei, L., Iglesias, J. E., Ou, Y., Grant, P. E., & Fischl, B. (2020). Infant FreeSurfer: An automated segmentation and surface extraction pipeline for T1-weighted neuroimaging data of infants 0–2 years. Neuroimage, 218, 116946. doi:https://doi.org/10.1016/j.neuroimage.2020.116946.
+- Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., . . . Jiang, T. (2016). The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26(8), 3508-3526. doi:10.1093/cercor/bhw157.
+- Fillmore, P. T., Richards, J. E., Phillips-Meek, M. C., Cryer, A., & Stevens, M. (2015). Stereotaxic Magnetic Resonance Imaging Brain Atlases for Infants from 3 to 12 Months. Developmental Neuroscience, 37(6), 515-532. doi:10.1159/000438749.
+- Heckemann, R. A., Hajnal, J. V., Aljabar, P., Rueckert, D., & Hammers, A. (2006). Automatic anatomical brain MRI segmentation combining label propagation and decision fusion. Neuroimage, 33(1), 115-126. doi:https://doi.org/10.1016/j.neuroimage.2006.05.061.
+- Klein, A., & Tourville, J. (2012). 101 Labeled Brain Images and a Consistent Human Cortical Labeling Protocol. Frontiers in Neuroscience, 6(171). doi:10.3389/fnins.2012.00171
+- Rolls, E. T., Huang, C.-C., Lin, C.-P., Feng, J., & Joliot, M. (2020). Automated anatomical labelling atlas 3. Neuroimage, 206, 116189. 
+- Shattuck, D. W., Mirza, M., Adisetiyo, V., Hojatkashani, C., Salamon, G., Narr, K. L., . . . Toga, A. W. (2008). Construction of a 3D probabilistic atlas of human cortical structures. Neuroimage, 39(3), 1064-1080. doi:https://doi.org/10.1016/j.neuroimage.2007.09.031.
+- Zöllei, L., Iglesias, J. E., Ou, Y., Grant, P. E., & Fischl, B. (2020). Infant FreeSurfer: An automated segmentation and surface extraction pipeline for T1-weighted neuroimaging data of infants 0–2 years. Neuroimage, 218, 116946. doi:https://doi.org/10.1016/j.neuroimage.2020.116946.
 
 ------------------------------------------------------------------------------------------
