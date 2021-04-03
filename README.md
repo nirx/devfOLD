@@ -5,7 +5,7 @@ The toolbox assists NIRS and fNIRS users to design source-detector channel arran
 Users of the devfOLD should refer to the manuscript: 
 Fu, X., & Richards, J.E: Age-specific Design of fNIRS Channel Placement: devfOLD: The Developmental fNIRS Optodes’ Location Decider. 
 
-devfOLD is available as an Application for Matlab environment: /App/fOLD.mlappinstall
+devfOLD is available as an Application for Matlab environment: /Developer/devfOLD.mlapp.
 It operates on all tested MATLAB platforms (Windows 2020b, Mac OSX 2020b, Linux 2020a, Windows and Mac OSX MATLAB online).
 We presume that it works on prior MATLAB versions and will work on future ones.
 
