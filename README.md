@@ -3,7 +3,7 @@
 The toolbox assists NIRS and fNIRS users to design source-detector channel arrangement based on study-specific age groups and regions of interests (ROIs). 
 
 Users of the devfOLD should refer to the manuscript: 
-Fu, X., & Richards, J.E: Age-specific Design of fNIRS Channel Placement: devfOLD: The Developmental fNIRS Optodes’ Location Decider. 
+Fu, X., & Richards, J.E: devfOLD: A Toolbox for Designing Age-Specific fNIRS Channel Placement. 
 
 devfOLD is available as an Application for Matlab environment: /Developer/devfOLD.mlapp.
 It operates on all tested MATLAB platforms (Windows 2020b, Mac OSX 2020b, Linux 2020a, Windows and Mac OSX MATLAB online).
@@ -13,31 +13,39 @@ The current toolbox is an extension of the fOLD toolbox (Zimeo Morais, Balardin,
 * Toolbox: https://github.com/nirx/fOLD-public
 * Manuscript: https://www.nature.com/articles/s41598-018-21716-z
 
-The key improvements from the fOLD toolbox are:
+**Key improvements from the fOLD toolbox**:
 * The channel-to-ROI specificity were estimated using age-specific head models. The head models were obtained from the “Neurodevelopmental MRI Database”. Information about the Database is available online: http://jerlab.psych.sc.edu/NeurodevelopmentalMRIDatabase/
 * The devfOLD allows users to make channel design decisions based on 1) averaged age group estimations from individual head models from the Database; 2) estimations from an individual participant head model from the user’s study; or 3) estimations from average age-appropriate templates from the Database.
-* ROI parcellations were conducted using developmentally appropriate stereotaxic atlases:
-  Lobar: Fillmore, Richards, Phillips-Meek, Cryer, and Stevens (2015)
-  Hammers: Heckemann, Hajnal, Aljabar, Rueckert, and Hammers (2006)
-  Brainnetome: Fan et al. (2016)
-  Desikan-Killiany-Tourville (Freesurfer): Klein and Tourville (2012)
-    - Infant Freesurfer: Zöllei, Iglesias, Ou, Grant, and Fischl (2020)
-  LONI Probabilistic Brain Atlas (LPBA40): Shattuck et al. (2008)
-  AAL3: Rolls, Huang, Lin, Feng, and Joliot (2020)
+* ROI parcellations were conducted using developmentally appropriate stereotaxic atlases:  
+  **Lobar**: Fillmore, Richards, Phillips-Meek, Cryer, and Stevens (2015)  
+  **Hammers**: Heckemann, Hajnal, Aljabar, Rueckert, and Hammers (2006)  
+  **Brainnetome**: Fan et al. (2016)  
+  **Desikan-Killiany-Tourville (Freesurfer)**: Klein and Tourville (2012); Infant Freesurfer: Zöllei, Iglesias, Ou, Grant, and Fischl (2020)  
+  **LONI Probabilistic Brain Atlas (LPBA40)**: Shattuck et al. (2008)  
+  **AAL3**: Rolls, Huang, Lin, Feng, and Joliot (2020)  
 
-The toolbox provides a set of example data: 
+**devfOLD Example Data**: 
 * 3 months, 6 months, and adults - averaged age group estimations from individual head models (#1). Estimations can be displayed using the “Age” dropdown list.
 * A 3-month old individual: S0131 (#2). Estimations can be displayed by typing in the folder name in the “Age(specify)” box.
 * A 3-month age-appropriate template: S0300 (#3). Estimations can be displayed by typing in the folder name in the “Age(specify)” box.
 
+**Access Additional Age Groups**:  
 Additional data can be downloaded from folder “SeparateGroups” (method #1) based on the age group of interest. Please save the individual age folder (e.g. “1-0Months”) in the ../Developer/mat/ directory, and use the “Age(specify)” box in the toolbox to display the estimations.
 
-**Important Copyright-related guidelines for devfOLD**: 
+**Look-up Tables**:  
+Look-up tables for all available age groups are accessible in "Look-up Tables". They provide full information on specificity estimates, ROI parcellations, and channel information. Please see README.md for their utility. 
+
+**devfOLD Supplementary Information**:  
+See "Supplementary" directory
+* The .mp4 recording provides a demonstration of the toolbox. It is a flash talk given at the Biennial Meeting of the Society for Research in Child Development (SRCD) 2021
+* The .pdf file provides additional methodological information and results on between-age-group comparison in ROI-to-channel correspondence. 
+
+**Important Copyright-related Guidelines for devfOLD**: 
 1) devfOLD is provided "as is" with no warranties and subject to change.
 2) The software shall not be redistributed without authorization.
 3) The devfOLD paper (Fu and Richards) and fOLD paper (Zimeo Morais et al., 2018) should be referenced if using devfOLD.
 
-**References for the atlases used**:
+**References for the Atlases Used**:
 
 - Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., . . . Jiang, T. (2016). The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26(8), 3508-3526. doi:10.1093/cercor/bhw157.
 - Fillmore, P. T., Richards, J. E., Phillips-Meek, M. C., Cryer, A., & Stevens, M. (2015). Stereotaxic Magnetic Resonance Imaging Brain Atlases for Infants from 3 to 12 Months. Developmental Neuroscience, 37(6), 515-532. doi:10.1159/000438749.
