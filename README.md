@@ -13,7 +13,7 @@ The current toolbox is an extension of the fOLD toolbox (Zimeo Morais, Balardin,
 * Toolbox: https://github.com/nirx/fOLD-public
 * Manuscript: https://www.nature.com/articles/s41598-018-21716-z
 
-**Key improvements from the fOLD toolbox**:
+**Key Improvements from the fOLD Toolbox**:
 * The channel-to-ROI specificity were estimated using age-specific head models. The head models were obtained from the “Neurodevelopmental MRI Database”. Information about the Database is available online: http://jerlab.psych.sc.edu/NeurodevelopmentalMRIDatabase/
 * The devfOLD allows users to make channel design decisions based on 1) averaged age group estimations from individual head models from the Database; 2) estimations from an individual participant head model from the user’s study; or 3) estimations from average age-appropriate templates from the Database.
 * ROI parcellations were conducted using developmentally appropriate stereotaxic atlases:  
