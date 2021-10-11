@@ -1,4 +1,4 @@
-# The Developmental fNIRS Optodes’ Location Decider: devfOLD
+# *devfOLD*: A Toolbox for Designing Age-Specific fNIRS Channel Placement
 
 The toolbox assists NIRS and fNIRS users to design source-detector channel arrangement based on study-specific age groups and regions of interests (ROIs). 
 
