@@ -16,7 +16,7 @@ The current toolbox is an extension of the fOLD toolbox (Zimeo Morais, Balardin,
 **Key Improvements from the fOLD Toolbox**:
 * The channel-to-ROI specificity were estimated using age-specific head models. The head models were obtained from the “Neurodevelopmental MRI Database”. Information about the Database is available online: http://jerlab.psych.sc.edu/NeurodevelopmentalMRIDatabase/
 * The devfOLD allows users to make channel design decisions based on 1) averaged age group estimations from individual head models from the Database; 2) estimations from an individual participant head model from the user’s study; or 3) estimations from average age-appropriate templates from the Database.
-* ROI parcellations were conducted using developmentally appropriate stereotaxic atlases:  
+* ROI parcellations were constructed using developmentally appropriate stereotaxic atlases:  
   **Lobar**: Fillmore, Richards, Phillips-Meek, Cryer, and Stevens (2015)  
   **Hammers**: Heckemann, Hajnal, Aljabar, Rueckert, and Hammers (2006)  
   **Brainnetome**: Fan et al. (2016)  
